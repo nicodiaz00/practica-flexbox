@@ -1,0 +1,256 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    margin: 0px;;
+    font-size: 18px; /* Ahora 1rem = 18px */
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+}
+
+.info{
+    justify-content: flex-end;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header {
+    display: flex;
+    justify-content: space-around; /* */
+    height: 70vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.p-header{
+    display: flex;
+    flex-direction: column;
+    
+    width: 40%;
+    justify-content: center;
+
+}
+.p-header > p{
+    font-size: 1rem;
+    margin: 1.25em;
+    
+}
+.p-header > a >button{
+    width: 100px;
+    height: 40px;
+    margin-left: 1.5em;
+    background-color: #FFCC00;
+    color: black;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.img-header{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.img-header > img{
+    
+    max-width: 100%;  /* Se ajusta al ancho sin sobrepasar */
+    height: auto;  /* Mantiene la proporción */
+    border-radius: 1%;
+}
+
+
+/* section de cards*/
+
+.section-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.card{
+    width: 30%;
+    background-color: #FFCC00;
+    min-width: 400px;
+    min-height: 500px;
+    margin: 1.5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.card-img{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card-img img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    justify-content: center;
+}
+.card-info{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-info p{
+    margin: 1.5em;
+    font-size: 0.9rem;
+}
+
+
+/*section mas info*/
+
+.info{
+    
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.banner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 40%;
+    background-color: #FFCC00;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.banner-info{
+    
+    flex: 1 1 70%; /* Hace que ocupe el 70% del espacio disponible */
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+      
+}
+.banner-info h2, .banner-info p {
+    margin: 1.5em;
+}
+.message{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+    
+}
+.message > button{
+    width: 50%;
+    height: 30%;
+    border-radius: 8px;
+    
+    
+}
+.message > button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*media querys para el header*/
+@media (max-width: 1400px) {
+    .header {
+        flex-direction: column; /* Los elementos se apilan en columna */
+        height: auto; /* Se ajusta automáticamente */
+        align-items: center;
+        justify-content: center;
+    }
+   .p-header > a {
+    margin: 0.5rem;
+   }
+
+
+}
+/*estilos para aplicar en pantallas chicas*/
+@media (max-width: 768px) {
+    .banner {
+        flex-wrap: wrap; /* Hace que los elementos se apilen */
+        align-items: center;
+    }
+    .banner-info >h2{
+        font-size: 0.7rem;
+    }
+    .banner-info >p{
+        font-size: 0.7rem;
+    }
+    
+
+    .banner-info, .message {
+        flex: 1 1 100%; /* Ocupan el 100% del ancho */
+        text-align: center;
+    }
+
+    .message {
+        margin-top: 10px;
+        
+    }
+    .message > button{
+        width: auto;
+        height: auto;
+        font-size: 1rem;
+    }
+   
+    .p-header{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .p-header >p{
+        font-size: 0.9rem;
+        text-align: center;
+        
+    }
+    footer{
+        flex-direction: column;
+
+    }
+    .copy > p{
+        font-size: 0.8rem;
+        margin: 1rem;
+    }
+    
+}
+
+
+
+
+/*seccion footer*/
+
+footer{
+    background-color: gray;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+}
+.social {
+    display: flex;
+    justify-content: space-between;
+}
+.social> a > img{
+    width: 40%; /* O ajusta a un tamaño adecuado */
+    height: auto; /* Mantiene la proporción */
+    object-fit: contain; /* Evita deformaciones */
+
+}
